@@ -30,7 +30,6 @@ dex_src_files := \
 	InstrUtils.cpp \
 	Leb128.cpp \
 	OptInvocation.cpp \
-	sha1.cpp \
 	SysUtil.cpp \
 
 dex_include_files := \
@@ -66,7 +65,7 @@ endif # !SDK_ONLY
 ##
 ##
 include $(CLEAR_VARS)
-LOCAL_SRC_FILES := $(dex_src_files)
+LOCAL_SRC_FILES := $(dex_src_files) sha1.cpp
 LOCAL_C_INCLUDES += $(dex_include_files)
 LOCAL_STATIC_LIBRARIES := liblog libutils
 LOCAL_WHOLE_STATIC_LIBRARIES := libziparchive-host
